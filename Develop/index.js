@@ -1,63 +1,86 @@
 const fs = require('fs');
-const inquirer = require('./node_modules/inquirer/lib/inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const inquirer = require('inquirer');
+const markDown = require('./utils/generateMarkdown.js');
+// const projectReadMe = require('./projectREADME.md');
+// const generateMarkdown = require('./utils/generateMarkdown.js');
 // array of questions for user
-const questions = readmeQuestions => {
-    return inquirer.prompt([
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is the title of this ReadMe?',
-    },
-    {
-        type: 'input',
-        name: 'description',
-        message: 'What is a description of this project?'
-    },
-    {
-        type: 'input',
-        name: 'tableofcontents',
-        message: 'what is the Table of Contents for this ReadMe?'
-    },
-    {
-        type: 'input',
-        name: 'installation',
-        message: 'What installation did you use?'
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'What was the usage for this project?'
-    },
-    {
-        type: 'input',
-        name: 'license',
-        message: 'What license(s) apply?'
-    },
-    {
-        type: 'input',
-        name: 'contributing',
-        message: 'Were there any contributers to this project?'
-    },
-    {
-        type: 'input',
-        name: 'tests',
-        message: 'What tests were run on this project?'
-    },
-    {
-        type: 'input',
-        name: 'questions',
-        message: 'What questions did you have at the beginning of the project?'
-    }
-    ])
-    
-    
+const questions = 
+    [
+        {
+            type: 'input',
+            name: 'user',
+            message: 'What is your GitHub user name?'
+        },
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is the title of this ReadMe?',
+        },
+        {
+            type: 'input',
+            name: 'description',
+            message: 'What is a description of this project?',
+        },
+        {
+            type: 'input',
+            name: 'tableofcontents',
+            message: 'what is the Table of Contents for this ReadMe?'
+        },
+        {
+            type: 'input',
+            name: 'installation',
+            message: 'What installation did you use?'
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'What was the usage for this project?'
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'What license(s) apply?'
+        },
+        {
+            type: 'input',
+            name: 'contributing',
+            message: 'Were there any contributers to this project?'
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'What tests were run on this project?'
+        },
+        {
+            type: 'input',
+            name: 'questions',
+            message: 'What questions did you have at the beginning of the project?'
+        }
+    ]
+
+function readmeQuestions() {
+    inquirer.prompt(questions)
+     .then(function(answers) {
+        fs.writeFile('./projectREADME.md', markDown(answers), err => {
+            if (err) throw new Error(err);
+        })
+     });
 };
 
-questions();
+readmeQuestions();
+
+
+
+// questions();
 // function to write README file
-function writeToFile(, data) {
-}
+
+
+
+// fs.readFile('./projectREADME.md', utf8, function(err, data){
+//     console.log(data);
+// });
+
+// console.log(fs.readFile);
 
 // function to initialize program
 // function init() {
