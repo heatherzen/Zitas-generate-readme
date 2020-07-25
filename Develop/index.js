@@ -1,8 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const markDown = require('./utils/generateMarkdown.js');
-// const projectReadMe = require('./projectREADME.md');
-// const generateMarkdown = require('./utils/generateMarkdown.js');
+
 // array of questions for user
 const questions = 
     [
@@ -37,9 +36,10 @@ const questions =
             message: 'What was the usage for this project?'
         },
         {
-            type: 'input',
+            type: 'checkbox',
             name: 'license',
-            message: 'What license(s) apply?'
+            message: 'What license(s) apply?',
+            choices: ["GitHub", "NPM"]
         },
         {
             type: 'input',
@@ -69,18 +69,6 @@ function readmeQuestions() {
 
 readmeQuestions();
 
-
-
-// questions();
-// function to write README file
-
-
-
-// fs.readFile('./projectREADME.md', utf8, function(err, data){
-//     console.log(data);
-// });
-
-// console.log(fs.readFile);
 
 // function to initialize program
 // function init() {

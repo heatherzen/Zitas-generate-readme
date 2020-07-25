@@ -10,14 +10,18 @@ function generateMarkdown(data) {
 ## Usage
      ${data.usage}
 ## License
-     ${data.license}
+     https://img.shields.io/badge/license-${data.license}-blue.svg
+     
 ## Contributing
      ${data.contributing}
-## Tests
+## Test Instructions
      ${data.tests}
 ## Questions
      ${data.questions}
 `;
 }
 
+function gitHubLink(data) {
+     return `www.${data}.com`
+}
 module.exports = generateMarkdown;
