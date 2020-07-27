@@ -30,7 +30,7 @@ function generateMarkdown(data) {
      ${data.email}
 
      GitHub username: ${data.username}
-     [Check out Heather's GitHub, click here.](https://www.github.com/${data.username})
+[Check out Heather's GitHub, click here.](https://www.github.com/${data.username})
 `;
 }
 
