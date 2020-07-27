@@ -22,11 +22,6 @@ const questions =
         },
         {
             type: 'input',
-            name: 'tableofcontents',
-            message: 'what is the Table of Contents for this ReadMe?'
-        },
-        {
-            type: 'input',
             name: 'installation',
             message: 'What installation did you use?'
         },

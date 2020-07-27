@@ -23,9 +23,9 @@
 ## Questions
      lkj;lkj
 
-     GitHub username: heatherzen
-<https://www.github.com/heatherzen>
-[Heather's GitHub](https://www.github.com/heatherzen)
-     
+     GitHub Username: heatherzen
+
      If you have any additional questions, please contact me by email.
      heather.zen@gmail.com
+
+[Check out Heather's GitHub](https://www.github.com/heatherzen)
