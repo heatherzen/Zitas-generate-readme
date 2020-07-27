@@ -39,7 +39,7 @@ const questions =
         {
             type: 'input',
             name: 'license',
-            message: 'Please explain which license this application is covered under.'
+            message: 'Describe the license this application is covered under.'
         },
         {
             type: 'input',
