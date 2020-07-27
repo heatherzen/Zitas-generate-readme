@@ -26,7 +26,8 @@ function generateMarkdown(data) {
      ${data.questions}
 
      GitHub username: ${data.username}
-     <https://www.github.com/${data.username}>
+<https://www.github.com/${data.username}>
+[Heather's GitHub](https://www.github.com/${data.username})
      
      If you have any additional questions, please contact me by email.
      ${data.email}
