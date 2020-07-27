@@ -23,10 +23,12 @@ function generateMarkdown(data) {
 ## Tests
      ${data.tests}
 ## Questions
-     GitHub username: ${data.username}
-     <www.github.com/${data.username}>
      ${data.questions}
-     If you have any additional question, please contact me by email.
+
+     GitHub username: ${data.username}
+     <https://www.github.com/${data.username}>
+     
+     If you have any additional questions, please contact me by email.
      ${data.email}
 `;
 }

@@ -44,7 +44,7 @@ const questions =
         {
             type: 'input',
             name: 'license',
-            message: 'Please explain the license this application is covered under.'
+            message: 'Please explain which license this application is covered under.'
         },
         {
             type: 'input',
@@ -71,7 +71,7 @@ const questions =
 function readmeQuestions() {
     inquirer.prompt(questions)
      .then(function(answers) {
-        fs.writeFile('../README.md', markDown(answers), err => {
+        fs.writeFile('./projectREADME.md', markDown(answers), err => {
             if (err) throw new Error(err);
         })
      });
