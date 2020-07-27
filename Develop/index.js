@@ -37,9 +37,14 @@ const questions =
         },
         {
             type: 'checkbox',
-            name: 'license',
+            name: 'badge',
             message: 'What license(s) apply?',
             choices: ["GitHub", "NPM"]
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'Please describe your license.'
         },
         {
             type: 'input',
@@ -61,7 +66,7 @@ const questions =
 function readmeQuestions() {
     inquirer.prompt(questions)
      .then(function(answers) {
-        fs.writeFile('./projectREADME.md', markDown(answers), err => {
+        fs.writeFile('../README.md', markDown(answers), err => {
             if (err) throw new Error(err);
         })
      });
