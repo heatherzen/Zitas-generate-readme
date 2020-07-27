@@ -7,6 +7,10 @@ function generateMarkdown(data) {
      ${data.description}
 ## Table of Contents
 * [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#tests)
 * [Questions](#questions)
 ## Installation
      ${data.installation}
@@ -16,10 +20,14 @@ function generateMarkdown(data) {
      ${data.license}
 ## Contributing
      ${data.contributing}
-## Test Instructions
+## Tests
      ${data.tests}
 ## Questions
+     GitHub username: ${data.username}
+     <www.github.com/${data.username}>
      ${data.questions}
+     If you have any additional question, please contact me by email.
+     ${data.email}
 `;
 }
 

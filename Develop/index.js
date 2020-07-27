@@ -7,7 +7,7 @@ const questions =
     [
         {
             type: 'input',
-            name: 'user',
+            name: 'username',
             message: 'What is your GitHub user name?'
         },
         {
@@ -44,7 +44,7 @@ const questions =
         {
             type: 'input',
             name: 'license',
-            message: 'Please describe your license.'
+            message: 'Please explain the license this application is covered under.'
         },
         {
             type: 'input',
@@ -60,6 +60,11 @@ const questions =
             type: 'input',
             name: 'questions',
             message: 'What questions did you have at the beginning of the project?'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email for people to contact you with additional questions?'
         }
     ]
 
